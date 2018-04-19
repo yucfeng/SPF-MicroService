@@ -1,16 +1,32 @@
 package com.yucfeng.Entity;
 
-public class ListUDG {
 
-    private static int UNREACHABLE = Integer.MAX_VALUE;
+
+public class ListUDG {
 
     private int mEdgNum;    // 边的数量
     private VNode[] mVexs;  // 顶点数组
 
+    public int getmEdgNum() {
+        return mEdgNum;
+    }
+
+    public VNode[] getmVexs() {
+        return mVexs;
+    }
+
     // 邻接表中表的顶点
     private class VNode {
-        char data;          // 顶点信息
+        String data;          // 顶点信息
         ENode firstEdge;    // 指向第一条依附该顶点的弧
+
+        public String getData() {
+            return data;
+        }
+
+        public ENode getFirstEdge() {
+            return firstEdge;
+        }
     }
 
     // 邻接表中表对应的链表的节点
@@ -18,22 +34,34 @@ public class ListUDG {
         int ivex;       // 该边所指向的顶点的位置
         int weight;     // 该边的权
         ENode nextEdge; // 指向下一条弧的指针
+
+        public int getIvex() {
+            return ivex;
+        }
+
+        public int getWeight() {
+            return weight;
+        }
+
+        public ENode getNextEdge() {
+            return nextEdge;
+        }
     }
 
     // Link的结构体
 //    private static class EData {
-//        char start; // 边的起点
-//        char end;   // 边的终点
+//        String start; // 边的起点
+//        String end;   // 边的终点
 //        int weight; // 边的权重
 //
-//        public EData(char start, char end, int weight) {
+//        public EData(String start, String end, int weight) {
 //            this.start = start;
 //            this.end = end;
 //            this.weight = weight;
 //        }
 //    }
 
-    public ListUDG(char[] vexs, EData[] edges) {
+    public ListUDG(String[] vexs, EData[] edges) {
 
         // 初始化"顶点数"和"边数"
         int vlen = vexs.length;
@@ -51,8 +79,8 @@ public class ListUDG {
         mEdgNum = elen;
         for (int i = 0; i < elen; i++) {
             // 读取边的起始顶点和结束顶点
-            char c1 = edges[i].start;
-            char c2 = edges[i].end;
+            String c1 = edges[i].start;
+            String c2 = edges[i].end;
             int weight = edges[i].weight;
 
             // 读取边的起始顶点和结束顶点
@@ -82,7 +110,7 @@ public class ListUDG {
     /*
      * 返回ch位置
      */
-    private int getPosition(char ch) {
+    private int getPosition(String ch) {
         for(int i=0; i<mVexs.length; i++)
             if(mVexs[i].data==ch)
                 return i;
