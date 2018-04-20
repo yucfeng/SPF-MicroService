@@ -175,11 +175,10 @@ public class Spf {
         if (vs == vd) return res;
         res.add(vexs[vd]);
         while (prev[vd] != 0) {
-            System.out.println(vexs[vd]);
             vd = prev[vd];
-            res.add(0, vexs[vd]); //add(vexs[vd]);
+            res.add(0, vexs[vd]);
         }
-        res.add(0, vexs[vs]);  //add(vexs[vs]);
+        res.add(0, vexs[vs]);
         return res;
     }
 }

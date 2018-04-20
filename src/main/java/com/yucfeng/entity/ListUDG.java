@@ -108,9 +108,6 @@ public class ListUDG {
         }
     }
 
-    /*
-     * 返回ch位置
-     */
     private int getPosition(String name) {
         for(int i=0; i<mVexs.length; i++)
             if(mVexs[i].getNodeName() == name)

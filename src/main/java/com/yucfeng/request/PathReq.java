@@ -6,12 +6,9 @@ import java.io.Serializable;
 
 public class PathReq implements Serializable{
 
-    @Autowired
     private String src;
-    @Autowired
     private String dst;
-    @Autowired
-    private int constraint;
+    private Constraint constraint;
 
     public String getSrc() {
         return src;
@@ -21,7 +18,7 @@ public class PathReq implements Serializable{
         return dst;
     }
 
-    public int getConstraint() {
+    public Constraint getConstraint() {
         return constraint;
     }
 }

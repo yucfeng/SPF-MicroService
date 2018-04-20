@@ -15,8 +15,8 @@ import java.util.List;
 @RequestMapping(value = "/topo")
 public class TopoController {
 
-    String[] vexs = {"A", "B", "C", "D", "E", "F", "G"};
-    Link[] edges = {
+    private String[] vexs = {"A", "B", "C", "D", "E", "F", "G"};
+    private Link[] edges = {
             new Link("A", "B", 12),
             new Link("A", "F", 16),
             new Link("A", "G", 14),
