@@ -2,6 +2,7 @@ package com.yucfeng.spf;
 
 import com.yucfeng.entity.VNode;
 import com.yucfeng.entity.ENode;
+import com.yucfeng.response.PathResp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,25 +37,6 @@ public class Spf {
 
         public String getDst() {
             return dst;
-        }
-
-        public int getCost() {
-            return cost;
-        }
-    }
-
-    public class PathResp{
-
-        private List<String> nodes;
-        private int cost;
-
-        public PathResp(List<String> nodes, int cost) {
-            this.nodes = nodes;
-            this.cost = cost;
-        }
-
-        public List<String> getNodes() {
-            return nodes;
         }
 
         public int getCost() {
@@ -164,10 +146,10 @@ public class Spf {
 
         // 打印dijkstra最短路径的结果
         List<ShortestPath> res = new ArrayList<>();
-//        System.out.printf("dijkstra(%c): \n", mVexs[vs].getData());
+//        System.out.printf("dijkstra(%c): \n", mVexs[vs].getNodeName());
         for (int i = 0; i < mVexs.length; i++) {
-            System.out.printf("  shortest(%s, %s)=%d\n", mVexs[vs].getData(), mVexs[i].getData(), dist[i]);
-            ShortestPath sp = new ShortestPath(mVexs[vs].getData(), mVexs[i].getData(), dist[i]);
+            System.out.printf("  shortest(%s, %s)=%d\n", mVexs[vs].getNodeName(), mVexs[i].getNodeName(), dist[i]);
+            ShortestPath sp = new ShortestPath(mVexs[vs].getNodeName(), mVexs[i].getNodeName(), dist[i]);
             res.add(sp);
         }
         return res;
@@ -195,9 +177,9 @@ public class Spf {
         while (prev[vd] != 0) {
             System.out.println(vexs[vd]);
             vd = prev[vd];
-            res.add(vexs[vd]);
+            res.add(0, vexs[vd]); //add(vexs[vd]);
         }
-        res.add(vexs[vs]);
+        res.add(0, vexs[vs]);  //add(vexs[vs]);
         return res;
     }
 }

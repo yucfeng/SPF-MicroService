@@ -62,7 +62,7 @@ public class ListUDG {
 //        }
 //    }
 
-    public ListUDG(String[] vexs, EData[] edges) {
+    public ListUDG(String[] vexs, Link[] edges) {
 
         // 初始化"顶点数"和"边数"
         int vlen = vexs.length;
@@ -72,7 +72,7 @@ public class ListUDG {
         mVexs = new VNode[vlen];
         for (int i = 0; i < mVexs.length; i++) {
             mVexs[i] = new VNode();
-            mVexs[i].data = vexs[i];
+            mVexs[i].setNodeName(vexs[i]);
             mVexs[i].firstEdge = null;
         }
 
@@ -111,9 +111,9 @@ public class ListUDG {
     /*
      * 返回ch位置
      */
-    private int getPosition(String ch) {
+    private int getPosition(String name) {
         for(int i=0; i<mVexs.length; i++)
-            if(mVexs[i].data==ch)
+            if(mVexs[i].getNodeName() == name)
                 return i;
         return -1;
     }

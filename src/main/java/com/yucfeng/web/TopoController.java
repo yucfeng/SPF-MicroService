@@ -1,9 +1,10 @@
 package com.yucfeng.web;
 
 
-import com.yucfeng.entity.EData;
+import com.yucfeng.entity.Link;
 import com.yucfeng.entity.ListUDG;
-import com.yucfeng.entity.PathReq;
+import com.yucfeng.request.PathReq;
+import com.yucfeng.response.PathResp;
 import com.yucfeng.spf.Spf;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,19 +16,19 @@ import java.util.List;
 public class TopoController {
 
     String[] vexs = {"A", "B", "C", "D", "E", "F", "G"};
-    EData[] edges = {
-            new EData("A", "B", 12),
-            new EData("A", "F", 16),
-            new EData("A", "G", 14),
-            new EData("B", "C", 10),
-            new EData("B", "F", 7),
-            new EData("C", "D", 3),
-            new EData("C", "E", 5),
-            new EData("C", "F", 6),
-            new EData("D", "E", 4),
-            new EData("E", "F", 2),
-            new EData("E", "G", 8),
-            new EData("F", "G", 9),
+    Link[] edges = {
+            new Link("A", "B", 12),
+            new Link("A", "F", 16),
+            new Link("A", "G", 14),
+            new Link("B", "C", 10),
+            new Link("B", "F", 7),
+            new Link("C", "D", 3),
+            new Link("C", "E", 5),
+            new Link("C", "F", 6),
+            new Link("D", "E", 4),
+            new Link("E", "F", 2),
+            new Link("E", "G", 8),
+            new Link("F", "G", 9),
     };
 
     ListUDG pG = new ListUDG(vexs, edges);
@@ -45,7 +46,7 @@ public class TopoController {
     }
 
     @RequestMapping(value = "/path", method = RequestMethod.POST)
-    public Spf.PathResp getOneShortestPath(@RequestBody PathReq path) {
+    public PathResp getOneShortestPath(@RequestBody PathReq path) {
         Spf spf = new Spf(pG.getmVexs(), vexs);
         int vs = Arrays.binarySearch(vexs, path.getSrc());
         int vd = Arrays.binarySearch(vexs, path.getDst());

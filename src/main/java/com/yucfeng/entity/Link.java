@@ -1,12 +1,12 @@
 package com.yucfeng.entity;
 
-public class EData {
+public class Link {
 
     private String start; // 边的起点
     private String end;   // 边的终点
     private int weight; // 边的权重
 
-    public EData(String start, String end, int weight) {
+    public Link(String start, String end, int weight) {
         this.start = start;
         this.end = end;
         this.weight = weight;

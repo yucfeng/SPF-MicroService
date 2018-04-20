@@ -1,8 +1,10 @@
-package com.yucfeng.entity;
+package com.yucfeng.request;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class PathReq {
+import java.io.Serializable;
+
+public class PathReq implements Serializable{
 
     @Autowired
     private String src;
