@@ -1,4 +1,4 @@
-package com.yucfeng.request;
+package com.yucfeng.model.req;
 
 import com.yucfeng.model.entity.Node;
 

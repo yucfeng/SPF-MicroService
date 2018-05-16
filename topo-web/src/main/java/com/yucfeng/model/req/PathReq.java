@@ -1,7 +1,6 @@
-package com.yucfeng.request;
+package com.yucfeng.model.req;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 

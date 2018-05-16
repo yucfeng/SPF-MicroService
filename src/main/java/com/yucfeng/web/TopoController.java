@@ -1,8 +1,8 @@
 package com.yucfeng.web;
 
 
-import com.yucfeng.entity.Link;
-import com.yucfeng.entity.ListUDG;
+import com.yucfeng.model.entity.Link;
+import com.yucfeng.model.entity.ListUDG;
 import com.yucfeng.request.PathReq;
 import com.yucfeng.response.PathResp;
 import com.yucfeng.spf.Spf;
