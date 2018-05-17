@@ -1,4 +1,4 @@
-package com.yucfeng.exception;
+package com.yucfeng.topo.exception;
 
 public class NotFoundException extends RuntimeException {
 

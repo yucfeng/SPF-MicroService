@@ -1,4 +1,4 @@
-package com.yucfeng.model;
+package com.yucfeng.topo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

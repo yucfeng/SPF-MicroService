@@ -1,6 +1,6 @@
-package com.yucfeng.model.entity;
+package com.yucfeng.topo.model.entity;
 
-import com.yucfeng.model.base.NodeAttribute;
+import com.yucfeng.topo.model.base.NodeAttribute;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 

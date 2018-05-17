@@ -1,4 +1,4 @@
-package com.yucfeng.model.base;
+package com.yucfeng.topo.model.base;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.neo4j.ogm.annotation.Property;

@@ -1,6 +1,6 @@
 package com.yucfeng.topo;
 
-import com.yucfeng.model.EData;
+import com.yucfeng.topo.model.EData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

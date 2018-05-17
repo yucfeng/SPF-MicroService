@@ -1,6 +1,6 @@
-package com.yucfeng.model.req;
+package com.yucfeng.topo.model.req;
 
-import com.yucfeng.model.base.NodeAttribute;
+import com.yucfeng.topo.model.base.NodeAttribute;
 import org.springframework.data.repository.NoRepositoryBean;
 
 import java.io.Serializable;
