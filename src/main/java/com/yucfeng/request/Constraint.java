@@ -1,6 +1,6 @@
 package com.yucfeng.request;
 
-import com.yucfeng.model.entity.Node;
+import com.yucfeng.topo.model.entity.Node;
 
 import java.io.Serializable;
 import java.util.List;

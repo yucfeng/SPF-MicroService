@@ -1,4 +1,4 @@
-package com.yucfeng.model.entity;
+package com.yucfeng.topo.model.entity;
 
 public class Link {
 

@@ -1,4 +1,4 @@
-package com.yucfeng.model.entity;
+package com.yucfeng.topo.model.entity;
 
 public class ENode { // 链表体 与链表头组成一条链路
 

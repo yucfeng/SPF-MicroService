@@ -1,11 +1,12 @@
 package com.yucfeng.topo.service;
 
 import com.yucfeng.topo.model.entity.Node;
+import com.yucfeng.topo.service.base.BaseService;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface NodeService {
-
-    List<Node> findall();
+@Transactional
+public interface NodeService extends BaseService<Node, String>{
 
 }

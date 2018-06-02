@@ -1,4 +1,4 @@
-package com.yucfeng.model.entity;
+package com.yucfeng.topo.model.entity;
 
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 

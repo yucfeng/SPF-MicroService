@@ -1,7 +1,7 @@
 package com.yucfeng.spf;
 
-import com.yucfeng.model.entity.VNode;
-import com.yucfeng.model.entity.ENode;
+import com.yucfeng.topo.model.entity.VNode;
+import com.yucfeng.topo.model.entity.ENode;
 import com.yucfeng.response.PathResp;
 
 import java.util.ArrayList;
